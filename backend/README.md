@@ -10,6 +10,9 @@ This backend application is built using Express.js and integrates with OpenAI an
 
 This endpoint allows users to search for weather information by sending a query to Tavily.
 
+For more information about the Tavily documentation, visit [Tavily Documentation](https://docs.tavily.com/docs/javascript-sdk/tavily-search/getting-started).
+
+
 - **Method**: `GET`
 - **Request Parameters**:
   - `query` (string): The search term for the weather information (e.g., city name).
@@ -35,6 +38,7 @@ This endpoint allows users to search for weather information by sending a query 
 ### 2. `/session`
 
 This endpoint creates a session with OpenAI, which can be used by the frontend UI for future interactions.
+For more information about the OpenAI Realtime documentation, visit [OpenAI Realtime Sessions Documentation](https://platform.openai.com/docs/api-reference/realtime-sessions/session_object).
 
 - **Method**: `POST`
 - **Request Body**:
@@ -56,7 +60,6 @@ This endpoint creates a session with OpenAI, which can be used by the frontend U
   
 - **Response**:
   - **Success (201)**: Returns a JSON object containing the session ID and other session details.
-    More details: [here](https://platform.openai.com/docs/api-reference/realtime-sessions/session_object)
     ```json
     {
       "client_secret": {

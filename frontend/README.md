@@ -60,13 +60,44 @@ Open your browser and navigate to [http://localhost:3000](http://localhost:3000)
 - **Tailwind CSS**: For utility-first CSS styling.
 - **Sass**: For advanced styling capabilities.
 
-## Contributing
+## Function Descriptions
 
-If you would like to contribute to this project, please fork the repository and submit a pull request.
+- `getWeather`
+Fetches weather data from the backend using the provided location and sends the response to OpenAI.
 
-## License
+- `handleMessage`
+Parses message events received from OpenAI and processes them based on their type, such as handling responses or function calls.
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+- `handleFunctionCall`
+Invokes specific functions (e.g., `getWeather`) based on the function call messages received from OpenAI.
+
+- `handleTranscript`
+Extracts and logs transcript text from OpenAI messages to the console.
+
+- `setupAudio`
+Creates an audio DOM element, streams audio from the user's microphone, and connects it to the peer connection.
+
+- `setupDataChannel`
+Sets up a listener for message events on the WebRTC data channel to communicate with OpenAI in real-time.
+
+- `sendFunctionOutput`
+Sends the output of a tool function (e.g., `getWeather`) back to OpenAI with the function response.
+
+- `init`
+Initializes the connection to OpenAI's real-time model API, sets up WebRTC peer connection, and starts audio and data channels.
+
+- `stopRecording`
+Stops the recording, closes the connection to OpenAI, and releases resources such as audio streams and data channels.
+
+- `sendResponseCreate`
+Sends a message to OpenAI to indicate that a response has been created.
+
+- `onDataChannelOpen`
+Handles the event when the WebRTC data channel is successfully opened.
+
+- `showError`
+Displays an error message in the UI.
+
 
 ## Acknowledgments
 
